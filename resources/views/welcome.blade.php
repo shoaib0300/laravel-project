@@ -1,3 +1,17 @@
+<?php
+use Illuminate\Support\Facades\DB;
+
+$pdo = DB::connection()->getPdo();
+
+if($pdo){
+    echo "Get Connection Successfully" . DB::connection()->getDatabaseName();
+}else {
+    echo "Conection not connected";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
